@@ -483,6 +483,13 @@ body {
   margin-top: 200px;
 }
 
+.title__advantages {
+  font-size: 1.5rem;
+  color: #333333;
+  text-align: left;
+  margin-top: 0;
+}
+
 .social {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -622,6 +629,120 @@ body {
   background: -webkit-gradient(linear, left bottom, right top, from(rgba(49, 170, 226, 0.9)), to(rgba(157, 53, 192, 0.9)));
   background: linear-gradient(to top right, rgba(49, 170, 226, 0.9), rgba(157, 53, 192, 0.9));
   border-color: #00AEEF;
+}
+
+.descr {
+  font-size: 0.9rem;
+  line-height: 2rem;
+  color: #616161;
+}
+
+.advantages {
+  background: #fff;
+  padding: 118px 0 129px 0;
+}
+
+.advantages__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.advantages__photo {
+  width: 501px;
+  height: 373px;
+  background: url("/src/img/photo-advantages.png") center;
+  margin-left: auto;
+}
+
+.advantages__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.advantages__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  width: 50%;
+}
+
+.advantages__icon {
+  width: 56px;
+  height: 56px;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 17px 0;
+  margin: 0 20px 30px 0;
+}
+
+.advantages__icon_1 {
+  background: #1A1A2B;
+}
+
+.advantages__icon_1 .icon-ioxhost {
+  font-size: 1.5rem;
+}
+
+.advantages__icon_2 {
+  background: #00AEEF;
+}
+
+.advantages__icon_2 .icon-registered {
+  font-size: 1.5rem;
+}
+
+.advantages__icon_3 {
+  background: #9655C7;
+}
+
+.advantages__icon_3 .icon-user-o {
+  font-size: 1.5rem;
+}
+
+.advantages__icon_4 {
+  background: #86C724;
+}
+
+.advantages__icon_4 .icon-database {
+  font-size: 1.5rem;
+}
+
+.advantages__count {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #616161;
+  text-align: center;
+}
+
+.advantages__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 10px;
+}
+
+.advantages__subtitle {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #333333;
 }
 
 /*# sourceMappingURL=index.css.map*/
