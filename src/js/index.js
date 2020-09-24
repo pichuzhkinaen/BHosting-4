@@ -6,6 +6,7 @@ import 'slick-carousel';
 import '../css/bootstrap-grid.min.css';
 import '../../node_modules/slick-carousel/slick/slick.css';
 import '../../node_modules/slick-carousel/slick/slick-theme.css';
+import '../iconFonts/style.css';
 import '../css/style.css';
 
 
@@ -29,4 +30,21 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         ]
     });
+
+
+    //изменение стиля чекбокса поиска при клике на него
+    let checkBox = document.querySelectorAll('.checkbox__custom');
+
+    for (let i = 0; i < checkBox.length; i++) {
+        console.log(checkBox[i]);
+        checkBox[i].addEventListener('click', function() {
+
+            if (checkBox[i].classList.contains('checkbox__custom_active')) {
+                checkBox[i].classList.remove('checkbox__custom_active');
+            } else {
+                checkBox[i].classList.add('checkbox__custom_active');
+            }
+        });
+    }
+
 });

@@ -1,0 +1,22 @@
+.search-area {
+    width: 572px;
+    height: 63px;
+    margin: 49px auto 0 auto;
+    &__input {
+        position: relative;
+        width: 572px;
+        height: 63px;
+        border-radius: 50px;
+        border: 2px solid #00AEEF;
+        color: #616161;
+        font-size: 0.9rem;
+        padding-left: 65px;
+    }
+    &__icon {
+        position: absolute;
+        z-index: 10;
+        font-size: 2rem;
+        color: #616161;
+        margin: 16px 0 0 25px;
+    }
+}

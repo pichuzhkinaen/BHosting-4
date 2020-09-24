@@ -8,7 +8,8 @@
     &__photo {
         width: 501px;
         height: 373px;
-        background: url('/src/img/photo-advantages.png') center;
+        background: url('/src/img/photo-advantages.png');
+        background-position: 73% 0;
         margin-left: auto;
     }
     &__items {

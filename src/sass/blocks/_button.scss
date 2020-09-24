@@ -1,21 +1,36 @@
 .button {
-    width: 141px;
-    height: 53px;
-    background: #00AEEF;
-    border: 3px solid #fff;
-    border-radius: 5px;
-    border-bottom-style: none;
     color: #fff;
     text-transform: uppercase;
     text-align: center;
     font-size: 0.9rem;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, 0);
-    margin-top: 50px;
     cursor: pointer;
-    &:hover {
-        background: linear-gradient(to top right,rgba(49, 170, 226, .9),rgba(157, 53, 192, .9));
-        border-color:  #00AEEF;
+    &-header {
+        width: 141px;
+        height: 53px;
+        background: #00AEEF;
+        border: 3px solid #fff;
+        border-radius: 5px;
+        border-bottom-style: none;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin-top: 50px;
+        &:hover {
+            background: linear-gradient(to top right,rgba(49, 170, 226, .9),rgba(157, 53, 192, .9));
+            border-color:  #00AEEF;
+        }
+    }
+    &-search {
+        position: absolute;
+        width: 131px;
+        height: 46px;
+        background: linear-gradient(to top right,rgb(49, 170, 226),rgb(157, 53, 192));
+        border-radius: 50px;
+        border: none;
+        margin: 9px;
+        transform: translate(-115%, 0);
+        &:hover {
+            background: linear-gradient(to top right,rgb(157, 53, 192),rgb(49, 170, 226));
+        }
     }
 }

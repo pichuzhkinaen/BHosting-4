@@ -14805,6 +14805,17 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 /***/ }),
 
+/***/ "./iconFonts/style.css":
+/*!*****************************!*\
+  !*** ./iconFonts/style.css ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
 /***/ "./js/index.js":
 /*!*********************!*\
   !*** ./js/index.js ***!
@@ -14826,10 +14837,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_slick_carousel_slick_slick_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_slick_carousel_slick_slick_css__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _node_modules_slick_carousel_slick_slick_theme_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../node_modules/slick-carousel/slick/slick-theme.css */ "../node_modules/slick-carousel/slick/slick-theme.css");
 /* harmony import */ var _node_modules_slick_carousel_slick_slick_theme_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_slick_carousel_slick_slick_theme_css__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../css/style.css */ "./css/style.css");
-/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_css_style_css__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _iconFonts_style_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../iconFonts/style.css */ "./iconFonts/style.css");
+/* harmony import */ var _iconFonts_style_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_iconFonts_style_css__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../css/style.css */ "./css/style.css");
+/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_css_style_css__WEBPACK_IMPORTED_MODULE_7__);
 
 window.$ = window.jQuery = jquery__WEBPACK_IMPORTED_MODULE_0___default.a;
+
 
 
 
@@ -14859,6 +14873,23 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         ]
     });
+
+
+    //изменение стиля чекбокса поиска при клике на него
+    let checkBox = document.querySelectorAll('.checkbox__custom');
+
+    for (let i = 0; i < checkBox.length; i++) {
+        console.log(checkBox[i]);
+        checkBox[i].addEventListener('click', function() {
+
+            if (checkBox[i].classList.contains('checkbox__custom_active')) {
+                checkBox[i].classList.remove('checkbox__custom_active');
+            } else {
+                checkBox[i].classList.add('checkbox__custom_active');
+            }
+        });
+    }
+
 });
 
 /***/ })
