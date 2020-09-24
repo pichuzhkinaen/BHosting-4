@@ -1,0 +1,21 @@
+.menu {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    &__item {
+        margin-right: 53px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__link {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        color: #fff;
+        &:hover {
+            color: #00AEEF;
+        }
+    }
+
+}

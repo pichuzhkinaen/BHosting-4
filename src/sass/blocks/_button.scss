@@ -1,0 +1,21 @@
+.button {
+    width: 141px;
+    height: 53px;
+    background: #00AEEF;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    border-bottom-style: none;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 0.9rem;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: 50px;
+    cursor: pointer;
+    &:hover {
+        background: linear-gradient(to top right,rgba(49, 170, 226, .9),rgba(157, 53, 192, .9));
+        border-color:  #00AEEF;
+    }
+}

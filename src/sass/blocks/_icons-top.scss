@@ -1,0 +1,20 @@
+.icons-top {
+    display: flex;
+    &__link {
+        text-decoration: none;
+        margin-right: 18px;
+    }
+    &__circle {
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        border-radius: 50%;
+        color:  #00AEEF;
+        background: #fff;
+        padding-top: 7px;
+        &:hover {
+            background: #00AEEF;
+            color: #fff;
+        }
+    }
+}

@@ -1,0 +1,76 @@
+.carousel {
+    width: 80%;
+    margin: 0 auto;
+    .hexagons {
+        display: flex !important;
+        justify-content: space-around;
+        width: 70%;
+        margin: 10px auto 0 auto;
+        .hexagon {
+            width: 106px;
+            height: 200px;
+            text-align: center;
+            &__bg {
+                width: 91px;
+                height: 106px;
+                background: url("/src/icon/hexagon(2).svg") no-repeat;
+                background-size: 100%;
+                padding: 30px 0;
+                margin: 0 auto;
+                margin-bottom: 19px;
+            }
+            &__inner {
+                font-size: 1.9rem;
+                font-weight: bold;
+                color: #fff;
+                text-align: center;
+                &_icon {
+                    display: inline-block;
+                    font-size: 2.2rem;
+                    margin-top: 5px;
+                }
+            }
+            &__text {
+                font-size: 0.8rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                color: #fff;
+            }
+        }
+        
+    }
+}
+.slick-arrow {
+    width: 51px;
+    height: 51px;
+    background: rgba(26, 26, 26, .3);
+    color: #fff;
+    cursor: pointer;
+    &:hover {
+        background: rgba(26, 26, 26, .2);
+        color:#00AEEF;
+    }
+}
+.slick-prev {
+    left: 120%;
+    &::before {
+        content: '';
+        color: #fff;
+        font-size: 1.5rem;
+    }
+} 
+.slick-next {
+    left: 120%;
+    content: '\e905';
+    border-top: 1px solid  rgba(168, 168, 168, 0.1);
+    margin-top: 51px;
+    &::before {
+        content: '';
+    }
+}
+.icon-keyboard_arrow_left {
+    font-size: 1.5rem;
+}
+.icon-keyboard_arrow_right {
+    font-size: 1.5rem;
+}

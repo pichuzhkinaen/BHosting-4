@@ -1,0 +1,14 @@
+.social {
+    display: flex;
+    flex-direction: column;
+    &__link {
+        text-decoration: none;
+        margin-bottom: 30px;
+    }
+    &__icon {
+        color: #fff;
+        &:hover {
+            color: #00AEEF;
+        }
+    }
+}
