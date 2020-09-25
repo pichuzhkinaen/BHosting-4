@@ -1,5 +1,16 @@
 .descr {
     font-size: 0.9rem;
-    line-height: 2rem;
+    line-height:1.7rem;
     color: #616161;
+    &__build-website {
+        text-align: center;
+    }
+    &__advantages {
+        margin-top: 0;
+        margin-bottom: 35px;
+    }
+    &__title {
+        text-align: center;
+        margin-top: 20px;
+    }
 }

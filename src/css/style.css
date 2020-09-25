@@ -10,6 +10,10 @@ body {
   margin: 0;
 }
 
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
 .header {
   background: url("/src/img/main-bg.png") no-repeat;
   background-position: -245px -100px;
@@ -118,6 +122,115 @@ body {
   margin-right: 30px;
 }
 
+.build-website {
+  padding: 120px 0;
+}
+
+.build-website__dotted-line {
+  width: 70%;
+  border-top: 2px dotted  #00AEEF;
+  margin: 105px auto 0 auto;
+}
+
+.build-website__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: -35px;
+}
+
+.build-website__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 270px;
+}
+
+.build-website__circle {
+  width: 71px;
+  height: 71px;
+  background: #fff;
+  border-radius: 50%;
+  border: 2px dotted  #00AEEF;
+  color: #00AEEF;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 17px 0;
+  margin: 0 auto 30px auto;
+  cursor: pointer;
+}
+
+.build-website__circle:hover {
+  border: none;
+  background: -webkit-gradient(linear, left bottom, right top, from(#31aae2), to(#9d35c0));
+  background: linear-gradient(to top right, #31aae2, #9d35c0);
+  color: #fff;
+  padding: 19px 0;
+}
+
+.advantages {
+  background: #F9F9F9;
+  padding: 120px 0;
+}
+
+.advantages__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 75px;
+}
+
+.advantages__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 270px;
+  border-right: 2px dotted  #00AEEF;
+  padding: 0 20px;
+}
+
+.advantages__item:last-child {
+  border: none;
+}
+
+.advantages__icon {
+  width: 71px;
+  height: 71px;
+  font-size: 3.8rem;
+  background: -webkit-gradient(linear, left bottom, right top, from(#31aae2), to(#9d35c0));
+  background: linear-gradient(to top right, #31aae2, #9d35c0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 20px auto;
+}
+
+.package-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.package-slide__img {
+  width: 506px;
+  height: 340px;
+}
+
 .contacts {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -212,11 +325,34 @@ body {
   margin: 0;
 }
 
-.title__advantages {
+.title__experience {
   font-size: 1.5rem;
   color: #333333;
   text-align: left;
   margin-top: 0;
+}
+
+.title__section {
+  font-size: 1.6rem;
+  color: #333333;
+}
+
+.title__subtitle {
+  font-size: 1.5rem;
+  color: #333333;
+}
+
+.title__advantages {
+  font-size: 1.2rem;
+  color: #333333;
+  margin-top: 0;
+}
+
+.title__slider-package {
+  font-size: 1.5rem;
+  color: #333333;
+  text-transform: uppercase;
+  margin-top: 66px;
 }
 
 .social {
@@ -381,18 +517,49 @@ body {
   background: linear-gradient(to top right, #9d35c0, #31aae2);
 }
 
+.button-package-slide {
+  width: 141px;
+  height: 40px;
+  background: #fff;
+  border: 1px solid #00AEEF;
+  border-radius: 3px;
+  color: #00AEEF;
+  margin-top: 30px;
+}
+
+.button-package-slide:hover {
+  background: -webkit-gradient(linear, left bottom, right top, from(rgba(49, 170, 226, 0.9)), to(rgba(157, 53, 192, 0.9)));
+  background: linear-gradient(to top right, rgba(49, 170, 226, 0.9), rgba(157, 53, 192, 0.9));
+  border-color: #00AEEF;
+  color: #fff;
+}
+
 .descr {
   font-size: 0.9rem;
-  line-height: 2rem;
+  line-height: 1.7rem;
   color: #616161;
 }
 
-.advantages {
+.descr__build-website {
+  text-align: center;
+}
+
+.descr__advantages {
+  margin-top: 0;
+  margin-bottom: 35px;
+}
+
+.descr__title {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.experience {
   background: #fff;
   padding: 118px 0 129px 0;
 }
 
-.advantages__wrapper {
+.experience__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -401,7 +568,7 @@ body {
           justify-content: space-between;
 }
 
-.advantages__photo {
+.experience__photo {
   width: 501px;
   height: 373px;
   background: url("/src/img/photo-advantages.png");
@@ -409,7 +576,7 @@ body {
   margin-left: auto;
 }
 
-.advantages__items {
+.experience__items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -418,9 +585,10 @@ body {
           justify-content: start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-top: 50px;
 }
 
-.advantages__item {
+.experience__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -430,7 +598,7 @@ body {
   width: 50%;
 }
 
-.advantages__icon {
+.experience__icon {
   width: 56px;
   height: 56px;
   color: #fff;
@@ -440,46 +608,46 @@ body {
   margin: 0 20px 30px 0;
 }
 
-.advantages__icon_1 {
+.experience__icon_1 {
   background: #1A1A2B;
 }
 
-.advantages__icon_1 .icon-ioxhost {
+.experience__icon_1 .icon-ioxhost {
   font-size: 1.5rem;
 }
 
-.advantages__icon_2 {
+.experience__icon_2 {
   background: #00AEEF;
 }
 
-.advantages__icon_2 .icon-registered {
+.experience__icon_2 .icon-registered {
   font-size: 1.5rem;
 }
 
-.advantages__icon_3 {
+.experience__icon_3 {
   background: #9655C7;
 }
 
-.advantages__icon_3 .icon-user-o {
+.experience__icon_3 .icon-user-o {
   font-size: 1.5rem;
 }
 
-.advantages__icon_4 {
+.experience__icon_4 {
   background: #86C724;
 }
 
-.advantages__icon_4 .icon-database {
+.experience__icon_4 .icon-database {
   font-size: 1.5rem;
 }
 
-.advantages__count {
+.experience__count {
   font-size: 0.9rem;
   font-weight: bold;
   color: #616161;
   text-align: center;
 }
 
-.advantages__text {
+.experience__text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -490,7 +658,7 @@ body {
   margin-top: 10px;
 }
 
-.advantages__subtitle {
+.experience__subtitle {
   text-transform: uppercase;
   font-weight: bold;
   color: #333333;

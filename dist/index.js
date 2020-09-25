@@ -14856,7 +14856,7 @@ window.$ = window.jQuery = jquery__WEBPACK_IMPORTED_MODULE_0___default.a;
 document.addEventListener('DOMContentLoaded', function() {
     'use strict';
 
-    //слайдер
+    //слайдер первого скролла
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.carousel-inner').slick({
         speed: 1200,
         prevArrow: '<button type="button" class="slick-prev"><span class="icon-keyboard_arrow_left"></span></button>',
@@ -14874,12 +14874,30 @@ document.addEventListener('DOMContentLoaded', function() {
         ]
     });
 
+    //слайдер выбора пакета
+    // $('.carousel-package').slick({
+    //     speed: 1200,
+    //     prevArrow: '<button type="button" class="slick-package-prev"><span class="icon-long-arrow-left"></span></button>',
+    //     nextArrow: '<button type="button" class="slick-package-next"><span class="icon-long-arrow-right"></span></button>',
+    //     responsive: [
+    //         {
+    //             breakpoint: 992,
+    //             settings: {
+    //                 dots: false,
+    //                 centerMode: true,
+    //                 variableWidth: true,
+    //                 autoplay: false
+    //             }
+    //         }
+    //     ]
+    // });
+
 
     //изменение стиля чекбокса поиска при клике на него
     let checkBox = document.querySelectorAll('.checkbox__custom');
 
     for (let i = 0; i < checkBox.length; i++) {
-        console.log(checkBox[i]);
+        // console.log(checkBox[i]);
         checkBox[i].addEventListener('click', function() {
 
             if (checkBox[i].classList.contains('checkbox__custom_active')) {

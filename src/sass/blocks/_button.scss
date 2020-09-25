@@ -33,4 +33,18 @@
             background: linear-gradient(to top right,rgb(157, 53, 192),rgb(49, 170, 226));
         }
     }
+    &-package-slide {
+        width: 141px;
+        height: 40px;
+        background:#fff;
+        border: 1px solid #00AEEF;
+        border-radius: 3px;
+        color: #00AEEF;
+        margin-top: 30px;
+        &:hover {
+            background: linear-gradient(to top right,rgba(49, 170, 226, .9),rgba(157, 53, 192, .9));
+            border-color:  #00AEEF;
+            color: #fff;
+        }
+    }
 }
