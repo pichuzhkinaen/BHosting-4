@@ -7,7 +7,7 @@
 body {
     margin: 0;
 }
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, ul {
     margin: 0;
 }
 
@@ -171,5 +171,78 @@ h1, h2, h3, h4, h5 {
         height: 410px;
         background: linear-gradient(to top right,rgb(49, 170, 226),rgb(157, 53, 192));
         padding: 84px 120px;
+    }
+}
+.choose {
+    background: #fff;
+    padding: 120px 0;
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        padding: 0;
+    }
+    &__img {
+        width: 340px;
+        height: 258px;
+        margin: 84px 0 0 50px;
+    }
+    .tabcontent {
+        display: flex;
+        &_show {
+            display: block;
+        }
+        &_hide {
+            display: none;
+        }
+        &_fade {
+            animation-name: fade;
+            animation-duration: 2.5s;
+        }
+        @keyframes fade {
+            from {
+                opacity: 0.1;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    }
+}
+.count {
+    height: 450px;
+    background: url('/src/img/count-bg.png');
+    &-overlay {
+        height: 450px;
+        background: linear-gradient(to top right,rgba(49, 170, 226, .9),rgba(157, 53, 192, .9));
+    }
+    &-inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 180px 0;
+        &__item {
+            display: flex;
+            flex-direction: column;
+            color: #fff;
+            text-align: center;
+        }
+        &__icon {
+            color: #fff;
+            font-size: 5.5rem;
+            &_inner {
+                position: absolute;
+                color:  #00AEEF;
+                font-size: 2.2rem;
+                margin-top: 26px;
+                transform: translateX(-65px);
+            }
+        }
+        &__number {
+            font-size: 2.5rem;
+        }
+        &__text {
+            text-transform: uppercase;
+            font-size: 1.5rem;
+        }
     }
 }

@@ -14909,6 +14909,57 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    //табы в секции выбора лучшей хостинговой компании (section choose)
+    let chooseBtn = document.querySelectorAll('.choose__tab'),
+        tabContent = document.querySelectorAll('.tabcontent');
+
+    for (let i = 0; i < chooseBtn.length; i++) {
+        chooseBtn[0].classList.add('choose__tab_active');
+        chooseBtn[i].addEventListener('click', function() {
+            if (chooseBtn[i].classList.contains('choose__tab_active')) {
+                chooseBtn[i].classList.remove('choose__tab_active');
+            } else {
+                chooseBtn[i].classList.add('choose__tab_active');
+            }
+
+        });
+    }
+
+    // let tab = document.querySelectorAll('.info-header-tab'),
+    //     info = document.querySelector('.info-header'),
+    //     tabContent = document.querySelectorAll('.info-tabcontent');
+
+    // function hideTabContent(a) {
+    //     for (let i = a; i < tabContent.length; i++) {
+    //         tabContent[i].classList.remove('show');
+    //         tabContent[i].classList.add('hide');
+    //     }
+    // }
+
+    // hideTabContent(1);
+
+    // function showTabContent(b) {
+    //     if (tabContent[b].classList.contains('hide')) {
+    //         tabContent[b].classList.remove('hide');
+    //         tabContent[b].classList.add('show');
+    //     }
+    // }
+
+    // info.addEventListener('click', function(event) {
+    //     let target = event.target;
+    //     if (target && target.classList.contains('info-header-tab')) {
+    //         for(let i = 0; i < tab.length; i++) {
+    //             if (target == tab[i]) {
+    //                 hideTabContent(0);
+    //                 showTabContent(i);
+    //                 break;
+    //             }
+    //         }
+    //     }
+
+    // });
+
+
 });
 
 /***/ })
