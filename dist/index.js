@@ -14875,23 +14875,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     //слайдер выбора пакета
-    // $('.carousel-package').slick({
-    //     speed: 1200,
-    //     prevArrow: '<button type="button" class="slick-package-prev"><span class="icon-long-arrow-left"></span></button>',
-    //     nextArrow: '<button type="button" class="slick-package-next"><span class="icon-long-arrow-right"></span></button>',
-    //     responsive: [
-    //         {
-    //             breakpoint: 992,
-    //             settings: {
-    //                 dots: false,
-    //                 centerMode: true,
-    //                 variableWidth: true,
-    //                 autoplay: false
-    //             }
-    //         }
-    //     ]
-    // });
-
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.package-slide').slick({
+            speed: 1200,
+            prevArrow: '<button type="button" class="slick-package-prev"><span class="icon-long-arrow-left"></span></button>',
+            nextArrow: '<button type="button" class="slick-package-next"><span class="icon-long-arrow-right"></span></button>',
+            // dots: true,
+            dotsClass: 'slick-dots package-slide__dots',
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        dots: true,
+                        centerMode: true,
+                        variableWidth: true,
+                        autoplay: false
+                    }
+                }
+            ]
+        });
 
     //изменение стиля чекбокса поиска при клике на него
     let checkBox = document.querySelectorAll('.checkbox__custom');

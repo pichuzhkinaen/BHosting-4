@@ -156,10 +156,20 @@ h1, h2, h3, h4, h5 {
         margin: 20px auto;
     }
 }
-.package-slide {
+.package {
+    padding: 120px 0;
+}
+.builder {
     display: flex;
-    &__img {
-        width: 506px;
-        height: 340px;
+    &__photo {
+        width: 50%;
+        height: 410px;
+        background: url('/src/img/builder.png') left no-repeat;
+    }
+    &__text {
+        width: 50%;
+        height: 410px;
+        background: linear-gradient(to top right,rgb(49, 170, 226),rgb(157, 53, 192));
+        padding: 84px 120px;
     }
 }

@@ -18,6 +18,9 @@
     &__subtitle {
         font-size: 1.5rem;
         color: #333333;
+        &_white {
+            color: #fff;
+        }
     }
     &__advantages {
         font-size: 1.2rem;
@@ -26,8 +29,9 @@
     }
     &__slider-package {
         font-size: 1.5rem;
+        font-weight: normal;
         color: #333333;
         text-transform: uppercase;
-        margin-top: 66px;
+        margin-top: 65px;
     }
 }
