@@ -66,55 +66,80 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    //табы в секции выбора лучшей хостинговой компании (section choose)
-    let chooseBtn = document.querySelectorAll('.choose__tab'),
+    //табы в секции выбора лучшей хостинговой компании (section choice)
+
+    // let choiceBtn = document.querySelectorAll('.choice__tab'),
+    //     tabContent = document.querySelectorAll('.tabcontent');
+
+    // // for (let i = 0; i < choiceBtn.length; i++) {
+    // //     choiceBtn[0].classList.add('choice__tab_active');
+
+    // //     choiceBtn[i].addEventListener('click', function() {
+    // //         if (choiceBtn[i].classList.contains('choice__tab_active')) {
+    // //             choiceBtn[i].classList.remove('choice__tab_active');
+    // //         } else {
+    // //             choiceBtn[i].classList.add('choice__tab_active');
+    // //         }
+
+    // //     });
+    // // }
+
+    // choiceBtn[0].classList.add('choice__tab_active');
+
+    // for (let i = 0; i < choiceBtn.length; i++) {
+
+    //     choiceBtn[i].addEventListener('click', function() {
+    //         // if (choiceBtn[i].classList.contains('choice__tab_active')) {
+    //         //     choiceBtn[i].classList.remove('choice__tab_active');
+    //         // } else {
+    //         //     choiceBtn[i].classList.add('choice__tab_active');
+    //         // }
+
+    //     });
+    // }
+
+    // function hideTabContent() {
+        
+    // }
+
+    let tab = document.querySelectorAll('.choice__tab'),
+        menuTab = document.querySelector('.choice__menu'),
         tabContent = document.querySelectorAll('.tabcontent');
 
-    for (let i = 0; i < chooseBtn.length; i++) {
-        chooseBtn[0].classList.add('choose__tab_active');
-        chooseBtn[i].addEventListener('click', function() {
-            if (chooseBtn[i].classList.contains('choose__tab_active')) {
-                chooseBtn[i].classList.remove('choose__tab_active');
-            } else {
-                chooseBtn[i].classList.add('choose__tab_active');
-            }
+    tab[0].classList.add('choice__tab_active');
+    tabContent[0].classList.add('tabcontent_show');
 
-        });
+
+    function hideTabContent(a) {
+        for (let i = a; i < tabContent.length; i++) {
+            tabContent[i].classList.remove('show');
+            tabContent[i].classList.add('tabcontent_hide');
+            tab[i].classList.remove('choice__tab_active');
+        }
+    }
+    hideTabContent(1);
+
+
+    function showTabContent(b) {
+        if (tabContent[b].classList.contains('tabcontent_hide')) {
+            tabContent[b].classList.remove('tabcontent_hide');
+            tabContent[b].classList.add('show');
+            tab[b].classList.add('choice__tab_active');
+        }
     }
 
-    // let tab = document.querySelectorAll('.info-header-tab'),
-    //     info = document.querySelector('.info-header'),
-    //     tabContent = document.querySelectorAll('.info-tabcontent');
 
-    // function hideTabContent(a) {
-    //     for (let i = a; i < tabContent.length; i++) {
-    //         tabContent[i].classList.remove('show');
-    //         tabContent[i].classList.add('hide');
-    //     }
-    // }
+    menuTab.addEventListener('click', function(event) {
+        let target = event.target;
 
-    // hideTabContent(1);
-
-    // function showTabContent(b) {
-    //     if (tabContent[b].classList.contains('hide')) {
-    //         tabContent[b].classList.remove('hide');
-    //         tabContent[b].classList.add('show');
-    //     }
-    // }
-
-    // info.addEventListener('click', function(event) {
-    //     let target = event.target;
-    //     if (target && target.classList.contains('info-header-tab')) {
-    //         for(let i = 0; i < tab.length; i++) {
-    //             if (target == tab[i]) {
-    //                 hideTabContent(0);
-    //                 showTabContent(i);
-    //                 break;
-    //             }
-    //         }
-    //     }
-
-    // });
+        for (let i = 0; i < tab.length; i++) {
+            if (target == tab[i]) {
+                hideTabContent(0);
+                showTabContent(i);
+                break;
+            }
+        }
+    });
 
 
     //точки в секции о сотрудниках
