@@ -1,4 +1,4 @@
-.search-area {
+.input-area {
     width: 572px;
     height: 63px;
     margin: 49px auto 0 auto;
@@ -11,6 +11,15 @@
         color: #616161;
         font-size: 0.9rem;
         padding-left: 65px;
+        &-subscribe {
+            position: relative;
+            width: 677px;
+            height: 61px;
+            border-radius: 3px;
+            border: none;
+            padding-left: 32px;
+            margin-top: 43px;
+        }
     }
     &__icon {
         position: absolute;

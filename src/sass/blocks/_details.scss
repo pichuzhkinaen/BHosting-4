@@ -1,0 +1,29 @@
+.details {
+    width: 773px;
+    height: 59px;
+    border-left: 10px solid #00AEEF;
+    background: #F9F9F9;
+    padding-left: 30px;
+    margin-top: 18px;
+    &__summary {
+        display: flex;
+        justify-content: space-between;
+        color: #444444;
+        line-height: 59px;
+        &::-webkit-details-marker {
+            display: none;
+        }
+    }
+    &__input {
+        display: none;
+    }
+}
+
+details[open] .descr {
+    animation: spoiler 1s;
+}
+
+@keyframes spoiler {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}

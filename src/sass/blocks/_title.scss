@@ -21,6 +21,13 @@
         &_white {
             color: #fff;
         }
+        &-subscribe {
+            font-size: 0.8rem;
+            font-weight: normal;
+            color: #fff;
+            letter-spacing: 2px;
+            margin-top: 33px;
+        }
     }
     &__advantages {
         font-size: 1.2rem;
@@ -39,5 +46,13 @@
         color: #333333;
         text-align: left;
         margin-top: 50px;
+    }
+    &-questions {
+        text-align: left;
+        margin-bottom: 75px;
+    }
+    &__subscribe {
+        font-size: 1.9rem;
+        color: #fff;
     }
 }

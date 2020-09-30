@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
             speed: 1200,
             prevArrow: '<button type="button" class="slick-package-prev"><span class="icon-long-arrow-left"></span></button>',
             nextArrow: '<button type="button" class="slick-package-next"><span class="icon-long-arrow-right"></span></button>',
-            // dots: true,
+            dots: true,
             dotsClass: 'slick-dots package-slide__dots',
             responsive: [
                 {
@@ -115,6 +115,14 @@ document.addEventListener('DOMContentLoaded', function() {
     //     }
 
     // });
+
+
+    //точки в секции о сотрудниках
+    let dot = document.querySelectorAll('.dots__item');
+
+    for (let i = 0; i < dot.length; i++) {
+        dot[1].classList.add('dots__item_active');
+    }
 
 
 });

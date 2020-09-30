@@ -1,0 +1,36 @@
+.logos-slider {
+    text-align: center;
+    padding: 76px 0 120px 0;
+    .logos-slides {
+        &__img {
+            margin-right: 80px;
+        }
+    }
+    &__btn {
+        width: 31px;
+        height: 31px;
+        border-radius: 3px;
+        color: #00AEEF;
+        font-size: 1.5rem;
+        border: none;
+        margin: 60px 22px 0 0;
+        cursor: pointer;
+        &:hover {
+            background: #00AEEF;
+            opacity: 0.2;
+            color: #F6F6F6;
+        }
+        &_left {
+            content: '\e907';
+            &::before {
+                content: '';
+            }
+        }
+        &_right {
+            content: '\e905';
+            &::before {
+                content: '';
+            }
+        }
+    }
+}
