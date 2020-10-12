@@ -1,15 +1,15 @@
 .details {
     width: 773px;
     height: 59px;
-    border-left: 10px solid #00AEEF;
     background: #F9F9F9;
-    padding-left: 30px;
     margin-top: 18px;
     &__summary {
         display: flex;
         justify-content: space-between;
+        border-left: 10px solid #00AEEF;
         color: #444444;
         line-height: 59px;
+        padding-left: 30px;
         &::-webkit-details-marker {
             display: none;
         }

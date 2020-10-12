@@ -77,7 +77,7 @@
         &:hover {
             background: linear-gradient(to top right,rgb(157, 53, 192),rgb(49, 170, 226));
         }
-        &:active {
+        &_active {
             &::before {
                 content: '\e91a';
             }

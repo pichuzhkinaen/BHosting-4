@@ -1,14 +1,14 @@
 .experience {
     background: #fff;
     padding: 118px 0 129px 0;
-    &__wrapper {
+    &__content {
         display: flex;
         justify-content: space-between;
     }
     &__photo {
         width: 501px;
         height: 373px;
-        background: url('/src/img/photo-advantages.png');
+        background: url('/src/img/photo-advantages.png') no-repeat;
         background-position: 73% 0;
         margin-left: auto;
     }
@@ -16,12 +16,13 @@
         display: flex;
         justify-content: start;
         flex-wrap: wrap;
-        margin-top: 50px;
+        width: 50%;
     }
     &__item {
         display: flex;
         justify-content: start;
         width: 50%;
+        margin-top: 50px;
     }
     &__icon {
         width: 56px;

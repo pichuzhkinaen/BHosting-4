@@ -1,35 +1,55 @@
 .logos-slider {
+    position: relative;
     text-align: center;
-    padding: 76px 0 120px 0;
+    padding: 0 150px;
     .logos-slides {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 51px;
+        margin-top: 20px;
         &__img {
             margin-right: 80px;
         }
     }
     &__btn {
-        width: 31px;
-        height: 31px;
-        border-radius: 3px;
-        color: #00AEEF;
-        font-size: 1.5rem;
-        border: none;
-        margin: 60px 22px 0 0;
         cursor: pointer;
-        &:hover {
-            background: #00AEEF;
-            opacity: 0.2;
-            color: #F6F6F6;
-        }
+        margin-top: 60px;
         &_left {
-            content: '\e907';
+            position: absolute;
+            border: none;
+            width: 31px;
+            height: 31px;
+            border-radius: 3px;
+            color: #00AEEF;
+            background: #F6F6F6;
+            font-size: 1.5rem;
+            top: 76px;
+            left: 45%;
             &::before {
                 content: '';
             }
+            &:hover {
+                background: #00AEEF;
+                opacity: 0.2;
+                color: #F6F6F6;
+            }
         }
         &_right {
-            content: '\e905';
+            border: none;
+            width: 31px;
+            height: 31px;
+            border-radius: 3px;
+            color: #00AEEF;
+            background: #F6F6F6;
+            font-size: 1.5rem;
             &::before {
                 content: '';
+            }
+            &:hover {
+                background: #00AEEF;
+                opacity: 0.2;
+                color: #F6F6F6;
             }
         }
     }

@@ -17,7 +17,10 @@
         color: #fff;
     }
     &__details {
+        position: relative;
         background: #F9F9F9;
+        width: 100%;
+        padding-left: 30px;
         margin: 0;
     }
 }

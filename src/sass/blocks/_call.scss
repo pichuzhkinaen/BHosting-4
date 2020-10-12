@@ -1,15 +1,48 @@
 .call {
     position: absolute;
-    width: 372px;
-    height: 388px;
-    right: 100px;
-    transform: translateY(-194px);
-    background: #fff;
-    text-align: center;
-    text-transform: uppercase;
-    color: #333333;
-    padding: 52px 0;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    right: 40px;
+    z-index: 10;
+    &-btn {
+        display: flex;
+        justify-content: flex-end;
+        text-align: center;
+        margin-top: -100px;
+        cursor: pointer;
+        &__circle {
+            width: 61px;
+            height: 61px;
+            background: #00AEEF;
+            color: #fff;
+            font-size: 1.5rem;
+            line-height: 3.8rem;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        &__title {
+            font-size: 1.5rem;
+            line-height: 61px;
+            color: #fff;
+        }
+    }
+    &-modal {
+        display: none;
+        width: 372px;
+        height: 388px;
+        transform: translateY(-194px);
+        background: #fff;
+        text-align: center;
+        text-transform: uppercase;
+        color: #333333;
+        padding: 52px 0;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        z-index: 10;
+    }
+    &__close {
+        font-size: 1.2rem;
+        transform: translate(40%, -30px);
+        cursor: pointer;
+    }
     &__circle {
         width: 61px;
         height: 61px;
@@ -32,4 +65,4 @@
         font-size: 1.5rem;
         margin-top: 34px;
     }
-}
+} 
