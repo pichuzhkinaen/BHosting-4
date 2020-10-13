@@ -16,24 +16,24 @@ document.addEventListener('DOMContentLoaded', function() {
     //слайдер первого скролла
     $('.carousel-inner').slick({
         speed: 1200,
+        slidesToShow: 3,
+        slidesToScroll: 3,
         prevArrow: '<button type="button" class="slick-prev"><span class="icon-keyboard_arrow_left"></span></button>',
         nextArrow: '<button type="button" class="slick-next"><span class="icon-keyboard_arrow_right"></span></button>',
         responsive: [
             {
-                breakpoint: 992,
+                breakpoint: 768,
                 settings: {
-                    dots: false,
-                    centerMode: true,
-                    variableWidth: true,
+                    dots: true,
                     autoplay: false
                 }
             },
             {
-                breakpoint: 767,
+                breakpoint: 575,
                 settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
                     dots: true,
-                    centerMode: true,
-                    variableWidth: true,
                     autoplay: false
                 }
             }
@@ -89,46 +89,18 @@ document.addEventListener('DOMContentLoaded', function() {
               infinite: true,
               dots: false
             }
+          },
+          {
+            breakpoint: 575,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: false
+            }
           }
         ]
     });
-
-
-    // //слайдер с сотрудниками
-    // $('.semicircle-on').slick({
-    //     dots: true,
-    //     infinite: false,
-    //     speed: 300,
-    //     slidesToShow: 5,
-    //     slidesToScroll: 1,
-    //     prevArrow: '<button type="button" class="semicircle-btn semicircle-btn_left"><span class="icon-keyboard_arrow_left"></span></button>',
-    //     nextArrow: '<button type="button" class="semicircle-btn semicircle-btn_right"><span class="icon-keyboard_arrow_right"></span></button>',
-    //     responsive: [
-    //       {
-    //         breakpoint: 1024,
-    //         settings: {
-    //           slidesToShow: 3,
-    //           slidesToScroll: 1,
-    //           infinite: true,
-    //           dots: true
-    //         }
-    //       },
-    //       {
-    //         breakpoint: 600,
-    //         settings: {
-    //           slidesToShow: 2,
-    //           slidesToScroll: 1
-    //         }
-    //       },
-    //       {
-    //         breakpoint: 480,
-    //         settings: {
-    //           slidesToShow: 1,
-    //           slidesToScroll: 1
-    //         }
-    //       }
-    //     ]
-    //   });
 
 
     //карусель с сотрудниками
@@ -145,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
     worker[2].classList.add('semicircle-inner__worker_active');
 
     for (let i = 0; i < avatarImg.length; i++) {
-        avatarImgArrow.push(avatarImg[i]);
+        avatarImgArrow.push(avatarImg[i]); //Добавляет элемент в конец массива
     }
 
     arrowLeft.addEventListener('click', scrollLeft);
@@ -153,10 +125,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function scrollLeft() {
 
-        let tmp = avatarImgArrow.shift();
+        let tmp = avatarImgArrow.shift(); //Удаляет из массива первый элемент и возвращает его (удаляет элемент в начале, сдвигая очередь, так что второй элемент становится первым)
 
         // console.log(tmp);
-        avatarImgArrow.push(tmp);
+        avatarImgArrow.push(tmp); //Добавляет элемент в конец массива
 
         // console.log(avatarImgArrow);
 
@@ -173,28 +145,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 worker[j].classList.add('semicircle-inner__worker_active');
             }
         }
-        
-        // for (let k = 0; k < worker.length; k++) {
-        //     if (worker[k].classList.contains('semicircle-inner__worker_active')) {
-        //         worker[k].classList.remove('semicircle-inner__worker_active');
-        //         if (k - 1 >= 0) {
-        //             k = k - 1;
-        //         } else {
-        //             k = 4;
-        //         }
-        //         worker[k].classList.add('semicircle-inner__worker_active');
-        //     }
-        // }
 
         refreshAvatars();
     }
 
     function scrollRight() {
 
-        let tmp = avatarImgArrow.pop();
+        let tmp = avatarImgArrow.pop(); //удаляет последний элемент
 
         // console.log(tmp);
-        avatarImgArrow.unshift(tmp);
+        avatarImgArrow.unshift(tmp); //Добавляет элемент в начало массива
 
         // console.log(avatarImgArrow);
         for (let j = 0; j < dots.length; j++) {
@@ -222,6 +182,29 @@ document.addEventListener('DOMContentLoaded', function() {
             avatarDiv[i].appendChild(avatarImgArrow[i]);
         }
     }
+
+    //изменение внешнего вида секции с сотрудниками на мобильных устройствах
+    let mq = window.matchMedia('(max-width: 991px)');
+    myFunction(mq); // Вызов функции прослушивателя во время выполнения
+    mq.addEventListener('change', myFunction); // Присоединить функцию прослушивателя при изменении состояния
+
+    function myFunction(mq) {
+        if (mq.matches) { // Если медиа запрос совпадает
+            for (let j = 0; j < avatarDiv.length; j++) {
+                if (dots[j].classList.contains('dots__item_active')) {
+                    avatarDiv[j].style.display = 'block';
+                } else {
+                    avatarDiv[j].style.display = 'none';
+                }                  
+            }
+        }
+        else {
+            for (let j = 0; j < avatarDiv.length; j++) {
+                avatarDiv[j].style.display = 'block';
+            }                  
+        }
+    }
+
 
 
     //изменение стиля чекбокса поиска при клике на него
